@@ -1,0 +1,575 @@
+/* Margens do site */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'quicksand';
+}
+/* Background geral do site */
+body {
+  background-color: rgb(186, 233, 242);
+  font-family: 'quicksand';
+ }
+/* Fundo do Menu em cima */
+header {
+  background-color: rgb(41, 91, 101);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0.25pc 0.375pc rgba(0, 0, 0, 0.1); 
+ 
+}
+
+.logo {
+  width: 15pc; 
+  height: auto; 
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  flex-grow: 1; 
+}
+
+nav a {
+  color: white; 
+  text-decoration: none; 
+  background-color: transparent; 
+}
+
+nav a:focus, nav a:active {
+  outline: none;
+  background-color: transparent; 
+}
+
+nav a:hover {
+  color: #d1d1d1; 
+  background-color: transparent; 
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin-left: 1.25pc; 
+}
+
+nav ul li {
+  margin: 0 0.9375pc; 
+}
+
+/* Botão Agendar */
+.agendar, .servico-btn {
+  background-color: rgb(22, 53, 59);
+  border: none;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1pc; 
+  border-radius: 1.25pc; 
+  
+}
+
+.agendar:hover, .servico-btn:hover {
+  background-color: #7d7b7b;
+  transition: 0.3s;
+}
+
+/* Parte de MedsNex */
+main {
+  padding-top: 7.5pc; 
+}
+
+.somos {
+  background-color: #f5f5f5;
+  padding: 3.125pc; 
+  margin: 1.25pc auto; 
+  max-width: 62.5pc; 
+  box-shadow: 0 0.25pc 0.375pc rgba(0, 0, 0, 0.1);
+}
+
+.somos h2 {
+  font-size: 1.75pc; 
+  color: rgb(41, 91, 101);
+  margin-bottom: 1.25pc; 
+   }
+
+.somos p, .descricao p {
+  font-size: 1.125pc; 
+  color: #333;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 3.125pc 1.25pc; 
+  max-width: 75pc; 
+  margin: 0 auto;
+}
+
+.info .box {
+  background-color: #fff;
+  padding: 1.25pc; 
+  width: 28.125pc; 
+  box-shadow: 0 0.125pc 0.25pc rgba(0, 0, 0, 0.1); /
+}
+
+.info h3, .descricao h2 {
+  font-size: 1.5pc; 
+  color: rgb(41, 91, 101);
+  margin-bottom: 0.625pc; 
+}
+
+#servicos {
+  padding: 3.125pc 1.25pc; 
+  text-align: center;
+}
+
+.servicos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.servico-btn {
+  padding: 0.9375pc 1.25pc;
+  text-align: center;
+  margin: 0.625pc; 
+  border-radius: 0.3125pc; 
+  width: 12.5pc; 
+}
+
+/* Rodapé */
+footer {
+  background-color: rgb(41, 91, 101);
+  color: white;
+  text-align: center;
+  padding: 1.25pc 0; 
+  position: relative;
+  width: 100%;
+}
+
+.container, ul.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+/* Painél com médicos */
+.painel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  border-radius: 50px;
+  flex: 1 1 200px;
+  color: #0bafb4;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  transition: transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.painel h2 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.painel:hover {
+  box-shadow: 1px 3px 3px rgb(5, 5, 5);
+  transform: scale(1.05);
+}
+
+.painel:hover h2 {
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1.25pc; 
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.625pc; 
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info .box {
+    width: 56.25pc; 
+    margin-bottom: 1.25pc; 
+  }
+
+  .painel {
+    flex: 1 1 28.125pc;
+  }
+}
+
+@media (max-width: 480px) {
+  .agendar, .servico-btn {
+    width: 100%;
+    padding: 0.625pc; 
+    font-size: 0.875pc; 
+  }
+
+  .somos h2, .descricao h2 {
+    font-size: 1.5pc; 
+  }
+
+  .info .box, .painel {
+    width: 100%;
+  }
+}
+
+/* Tema Escuro */
+body.dark {
+  background-color: rgb(33, 37, 41);
+  color: #f5f5f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header.dark, footer.dark, button.dark {
+  background-color: rgb(73, 80, 87);
+}
+
+body.dark .somos, body.dark .info .box, body.dark .medico-info {
+  background-color: rgb(11, 12, 14);
+  color: white;
+}
+
+body.dark .somos p, body.dark .descricao p {
+  font-size: 1.125pc; 
+  color: #c5c5c5;
+}
+
+body.dark .agendar {
+  background-color: rgb(41, 91, 101);
+  color: white;
+}
+
+body.dark .agendar:hover {
+  background-color: #555; 
+}
+
+body.dark .servico-btn:hover {
+  background-color: #c0c0c0;
+}
+
+/* Botão */
+.trilho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.75pc; 
+  height: 1.25pc; 
+  background-color: #ccc;
+  border-radius: 1.875pc; 
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto; 
+  top: 0.625pc; 
+}
+
+.trilho::before {
+  content: '';
+  position: absolute;
+  width: 1.625pc;
+  height: 1.625pc; 
+  background-color: rgb(39, 35, 35);
+  border-radius: 50%;
+  left: 0px;
+  transition: transform 0.3s ease;
+}
+
+.trilho.dark {
+  background-color: rgb(125, 123, 123);
+}
+
+.trilho.dark::before {
+  transform: translateX(2.5pc); 
+  background-color: #efefef;
+}
+
+/* Parte dos médicos */
+.medico-detalhe {
+  padding: 3.125pc; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medico-info {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  padding: 1.25pc; 
+  box-shadow: 0 0.25pc 0.375pc rgba(0, 0, 0, 0.1); 
+  border-radius: 0.625pc; 
+}
+
+.medico-foto {
+  width: 15.625pc; 
+  height: 15.625pc; 
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1.25pc; 
+}
+.h_1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #315baf;
+  margin-bottom: 40px;
+}
+
+/* Parte medico */
+.H_01 {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalhos de cada seção */
+.E_1, .T-1 {
+  font-size: 1.8rem;
+  color: rgb(22, 53, 59);
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e6e6e6;
+  padding-bottom: 10px;
+}
+
+/* Parágrafos principais */
+.h_1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: rgb(60, 167, 189);
+  margin-bottom: 40px;
+}
+
+/* Seções */
+.H_01 {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalhos de cada seção */
+.E_1, .T-1 {
+  font-size: 1.8rem;
+  color: #437bb3;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0e0c0c;
+  padding-bottom: 10px;
+}
+
+/* Parágrafos principais */
+
+/* Destaque para informações importantes */
+strong {
+  color: #0c2b21;
+}
+
+/* Informações específicas (subtítulos menores) */
+.Exame_1, .Tra_2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* Destaque para informações importantes */
+strong {
+  color: rgb(41, 91, 101);
+}
+
+/* Informações específicas (subtítulos menores) */
+.Exame_1, .Tra_2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0a0a0a;
+  margin-bottom: 10px;
+}
+.Paragrafos_m{
+  color: #080808;
+}
+.Paragrafos_m.dark{
+  color: white;
+  
+}
+/*botao de link PG Serviços*/
+.botao {
+  display: grid;
+  padding: 1% 10%;
+  background-color: rgb(52, 100, 90); 
+  color: white; 
+  text-align: center;
+  text-decoration: none;
+  
+  font-size: 17px;
+  transition: background-color 0.3s;
+  justify-content: center;
+  
+}
+
+.botao:hover {
+  background-color: #3a3b3b; /* Cor quando o mouse passa por cima */
+}
+/* menu listra */
+.traço{
+    display: inline-block;/*permite q fique lado a lado dos outros elementos*/
+    margin-right: 1rem; /*ADD um espaçamento á direita de cada item */
+    transition: all 0.3s ease;/*ADD transição suave para qualquer alteração no estilo do elemento*/
+    transform: scale(1.03) perspective(200px);/*(scale) Aplica uma ligeira escala, (Pesrs) ADD uma perspectiva para efeitos 3D*/
+    cursor: pointer;/* Altera o cursor para indicar que o elemento é clicável. */
+}
+.tra{
+    text-decoration: none; /* Remove o sublinhado padrão do link. */
+    color: #ffffff;
+    font-weight: bold;/* Deixa o texto do link em negrito. */
+    font-size: 1rem;
+    border-radius: 1px;
+}
+.traço::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;/* Define o ponto de origem da transformação*/
+    transition: transform 0.3s ease-out;  /* Adiciona uma transição suave para a transformação. */
+    
+}
+.traço:hover::before{
+    transform: scaleX(1);/* Expande o pseudo-elemento para preencher toda a largura do <li> ao passar o mouse. */
+    transform-origin: bottom left;/* Altera o ponto de origem da expansão para o canto inferior esquerdo, criando um efeito de preenchimento da esquerda para a direita. */
+}
+
+
+/* PG consulta*/
+
+/* Estilo do container da consulta */
+.cunsul-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3pc
+
+  ;
+  
+}
+
+/* Título */
+.cunsul-title {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilização do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo dos rótulos dos campos */
+label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="date"],
+textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border-color: rgb(52, 100, 90);
+  outline: none;
+}
+
+/* Estilo do botão de submit */
+button {
+  background-color: rgb(52, 100, 90);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3a3b3b;
+}
+/* Estilo da descrição */
+.descricao_consul {
+  margin-bottom: 15px;
+}
+
+.descricao_consul label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Ajuste do campo de texto de descrição */
+textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; 
+  transition: border-color 0.3s ease;
+  
+}
+
+textarea:focus {
+  border-color: rgb(52, 100, 90);
+  outline: none;
+}
+
+/* Espaçamento para o campo Selecionar Médico */
+select {
+  margin-bottom: 15px; 
+}

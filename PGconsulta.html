@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedsNex</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <header>
+        <img src="logoX.png" alt="Logo do site">
+                
+        <nav>
+            
+            <ul>
+                <li class="traço"><a class="tra" href="index.html">MedsNex</a></li>
+                <li class="traço"><a class="tra"  href="PGmedicos.html">Médicos</a></li>
+                <li class="traço"><a class="tra"  href="PGservicos.html">Serviços</a></li>
+            </ul>
+        </nav>
+        
+        <button class="agendar" onclick="window.location.href='PGconsulta.html'">Agendar Consulta</button>
+    </header>
+
+    <main>
+        <div class="cunsul-container">
+            <h1 class="cunsul-title">Agentar Consulta</h1>
+            <div class="consul_centro">
+                <form id="consul-agendar">
+                    <label for="textNomeP">Nome Paciente</label>
+                    <input type="text" id="textNomeP" placeholder="Nome"><br>
+
+                    <label for="selectNomeD">Nome do Doutor</label>
+                    <select id="selectNomeD">
+                    <option value="" disabled selected>Selecione um médico</option>
+                    </select>
+
+                    
+
+            <div class="data_consul">
+                <label for="dtpDataNascimento">Data de Nascimento</label><br>
+				<input type="date" id="dtpDataNascimento" value="2000-01-01" required>
+
+            </div>
+			<div class="descricao_consul">
+                    <label for="des_consul">Instruções</label>
+                    <textarea class="form-control" id="des_consul" rows="4" placeholder="Descreva" required></textarea>
+            </div>
+                    <button type="submit" class="btn btn-purple btn-lg">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    
+    <footer>
+        <p>© 2024 MedsNex. Todos os direitos reservados.</p>
+        <div class="trilho" id="trilho">
+        <div class="indicador"></div> 
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
